@@ -17,11 +17,14 @@ import ThemeSwitch from "./ThemeSwitch";
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedUser, setSelectedUser] = useState(1);
-    const dropdownRef = useRef(null);
+    const dropdownRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const handleOutsideClick = (event) => {
-            if (!dropdownRef.current?.contains(event.target)) {
+        const handleOutsideClick = (event: MouseEvent) => {
+            if (
+                dropdownRef.current &&
+                !dropdownRef.current?.contains(event.target as Node)
+            ) {
                 setIsOpen(false);
             }
         };
@@ -35,14 +38,14 @@ function Navbar() {
         };
     }, [isOpen]);
 
-    const toggleDropdown = (e) => {
+    const toggleDropdown = (e: React.MouseEvent<SVGSVGElement>) => {
         e.stopPropagation();
         e.preventDefault();
         setIsOpen(!isOpen);
     };
 
-    const handleUserSelect = (user) => {
-        setSelectedUser(user);
+    const handleUserSelect = (userId: number) => {
+        setSelectedUser(userId);
     };
 
     return (

@@ -38,70 +38,65 @@ function ProductCarousel() {
                         <ArrowLeftCircleIcon className="w-6 h-6 text-blue-400 font-bold" />
                     }
                     controlSize={40}
-                    controlClassName="absolute top-1/2 transform -translate-y-1/2"
                 >
-                    {products.map((product) => (
-                        <Carousel.Slide key={product.id}>
-                            <div className="max-w-xs mx-auto bg-white rounded-md shadow-lg p-3 dark:bg-gray-800 dark:border-gray-600">
-                                {/* Image Box */}
-                                <div className="rounded-md overflow-hidden bg-gray-100 min-h-[425px] max-h-[425px]">
-                                    <img
-                                        src={product.image}
-                                        alt={product.name}
-                                        className="w-full h-full object-cover rounded-md"
-                                    />
-                                </div>
-
-                                {/* Product Info */}
-                                <div className="mt-4 space-y-3">
-                                    {/* First Section */}
-                                    <div className="flex items-center space-x-4">
-                                        {/* Logo */}
-                                        <div className="w-10 h-10 rounded-full bg-white">
-                                            <img
-                                                src="/icons/lululemon.webp"
-                                                alt="Logo"
-                                                className="w-full h-full object-cover rounded-full"
-                                            />
-                                        </div>
-                                        {/* Product Details */}
-                                        <div className="flex-1">
-                                            <div className="flex items-center place-content-between space-x-2">
-                                                <span className="text-lg font-bold dark:text-white">
-                                                    {product.name}
-                                                </span>
-                                                <span className="bg-blue-500 text-white text-[8px] font-semibold py-1 px-2 rounded-xl shadow-md">
-                                                    {product.tag}
-                                                </span>
-                                            </div>
-                                            <p className="text-black text-sm font-semibold dark:text-gray-400">
-                                                {product.title}
-                                            </p>
-                                        </div>
+                    {products &&
+                        products.length > 0 &&
+                        products.map((product) => (
+                            <Carousel.Slide key={product.id}>
+                                <div className="max-w-xs mx-auto bg-white rounded-md shadow-lg p-3 dark:bg-gray-800 dark:border-gray-600">
+                                    <div className="rounded-md overflow-hidden bg-gray-100 min-h-[425px] max-h-[425px]">
+                                        <img
+                                            src={product.image}
+                                            alt={product.name}
+                                            className="w-full h-full object-cover rounded-md"
+                                        />
                                     </div>
 
-                                    {/* Second Section */}
-                                    <div className="flex flex-wrap gap-2">
-                                        {product.chips.map((chip, j) => (
-                                            <div
-                                                key={j}
-                                                className="flex items-center space-x-2 bg-white dark:bg-gray-800 dark:border-gray-600 drop-shadow-lg py-1 px-3 rounded-2xl shadow-md"
-                                            >
+                                    <div className="mt-4 space-y-3">
+                                        <div className="flex items-center space-x-4">
+                                            <div className="w-10 h-10 rounded-full bg-white">
                                                 <img
-                                                    src={chip.icon}
-                                                    alt="Chip Logo"
-                                                    className="w-5 h-5 rounded-full"
+                                                    src="/icons/lululemon.webp"
+                                                    alt="Logo"
+                                                    className="w-full h-full object-cover rounded-full"
                                                 />
-                                                <span className="text-sm py-1 text-black dark:text-gray-400 font-bold">
-                                                    ${chip.amount}
-                                                </span>
                                             </div>
-                                        ))}
+                                            <div className="flex-1">
+                                                <div className="flex items-center place-content-between space-x-2">
+                                                    <span className="text-lg font-bold dark:text-white">
+                                                        {product.name}
+                                                    </span>
+                                                    <span className="bg-blue-500 text-white text-[8px] font-semibold py-1 px-2 rounded-xl shadow-md">
+                                                        {product.tag}
+                                                    </span>
+                                                </div>
+                                                <p className="text-black text-sm font-semibold dark:text-gray-400">
+                                                    {product.title}
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex flex-wrap gap-2">
+                                            {product.chips.map((chip, j) => (
+                                                <div
+                                                    key={j}
+                                                    className="flex items-center space-x-2 bg-white dark:bg-gray-800 dark:border-gray-600 drop-shadow-lg py-1 px-3 rounded-2xl shadow-md"
+                                                >
+                                                    <img
+                                                        src={chip.icon}
+                                                        alt="Chip Logo"
+                                                        className="w-5 h-5 rounded-full"
+                                                    />
+                                                    <span className="text-sm py-1 text-black dark:text-gray-400 font-bold">
+                                                        ${chip.amount}
+                                                    </span>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </Carousel.Slide>
-                    ))}
+                            </Carousel.Slide>
+                        ))}
                 </Carousel>
             </div>
         </div>

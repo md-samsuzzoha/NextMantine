@@ -7,10 +7,6 @@ function ThemeSwitch() {
     const { colorScheme, setColorScheme } = useMantineColorScheme();
     const dark = colorScheme === "dark";
 
-    const toggleColorScheme = () => {
-        setColorScheme(computedColorScheme === "dark" ? "light" : "dark");
-    };
-
     return (
         <>
             <button
