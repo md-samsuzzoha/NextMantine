@@ -49,8 +49,8 @@ function Navbar() {
     };
 
     return (
-        <header className="w-full bg-[#dee8fe] text-black dark:bg-gray-800 dark:border-b-2 dark:border-b-slate-500">
-            <nav className="max-w-[1440px] mx-auto flex justify-end items-end  py-4 relative font-inter">
+        <header className="bg-[#dee8fe] text-black dark:bg-gray-800 dark:border-b-2 dark:border-b-slate-500 px-3">
+            <nav className="flex flex-wrap justify-end items-center mx-auto max-w-screen-xl  py-4 relative font-inter">
                 <div className="dark:bg-gray-800 dark:border-gray-600 bg-[#fafbfc] border relative flex items-center p-2 rounded-md shadow-md pb-1">
                     <Image
                         src="/images/user.jpg"
