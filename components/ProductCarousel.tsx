@@ -49,7 +49,7 @@ function ProductCarousel() {
                             products.map((product) => (
                                 <Carousel.Slide key={product.id}>
                                     <div className="max-w-xs mx-auto bg-white drop-shadow-lg rounded-md dark:bg-gray-800 dark:border-gray-600">
-                                        <div className="rounded-md overflow-auto min-h-[430px] max-h-[430px] p-3 dark:bg-gray-800">
+                                        <div className="rounded-md overflow-hidden min-h-[430px] max-h-[430px] p-3 dark:bg-gray-800">
                                             <img
                                                 src={product.image}
                                                 alt={product.name}
