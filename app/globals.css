@@ -44,25 +44,3 @@
 .dropdown-open {
     user-select: none;
 }
-.mantine-Carousel-controls {
-    margin-left: -52px;
-    margin-right: -52px;
-}
-@media only screen and (max-width: 980px) {
-    .mantine-Carousel-controls {
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
-@media only screen and (max-width: 500px) {
-    .mantine-Carousel-controls {
-        display: none !important;
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 919px) {
-    .mantine-Carousel-controls {
-        margin-left: -36px;
-        margin-right: -36px;
-    }
-}
