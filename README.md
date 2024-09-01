@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextMantine
+
+NextMantine is a feature-rich Next.js starter template designed to help you build modern, responsive web applications with ease. It leverages the power of Next.js App Router, Mantine.dev for UI components, and Tailwind CSS for custom styling. With built-in light and dark mode support, a carousel component, and Jest for unit testing, NextMantine is your go-to template for developing scalable web applications.
+
+## Features
+
+- **Next.js App Router**: Leverage the latest App Router feature from Next.js for simplified routing and data fetching.
+- **Mantine UI Components**: Utilize Mantine.dev's beautiful and accessible UI components, including a customizable carousel.
+- **Tailwind CSS**: Tailwind CSS is used for utility-first styling, making it easy to customize the design.
+- **Dark/Light Mode**: Seamlessly switch between dark and light themes using Mantine's color scheme.
+- **Dropdown Menu**: A fully responsive dropdown menu built with Tailwind CSS.
+- **Unit Testing with Jest**: Write unit tests effortlessly using Jest to ensure your components work as expected.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js (>= 14.x.x)
+- Yarn or npm
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    ```bash
+    git clone https://github.com/yourusername/nextmantine.git
+    cd nextmantine
+    ```
 
-## Learn More
+2. Install the dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    yarn install
+    # or
+    npm install
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Run the development server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    ```bash
+    yarn dev
+    # or
+    npm run dev
+    ```
 
-## Deploy on Vercel
+    Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **/components**: Reusable components, such as the carousel and dropdown menu.
+- **/pages**: Application pages following the Next.js App Router structure.
+- **/styles**: Global styles and Tailwind CSS configuration.
+- **/tests**: Jest unit tests for your components.
+
+## Usage
+
+### Carousel Component
+
+To use the carousel component in your project:
+
+```jsx
+import { Carousel } from '@mantine/carousel';
+
+function ExampleCarousel() {
+  return (
+    <Carousel>
+      <Carousel.Slide>Slide 1</Carousel.Slide>
+      <Carousel.Slide>Slide 2</Carousel.Slide>
+      <Carousel.Slide>Slide 3</Carousel.Slide>
+    </Carousel>
+  );
+}
+
+export default ExampleCarousel;
